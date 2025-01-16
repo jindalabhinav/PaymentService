@@ -20,4 +20,18 @@ public class PaymentController {
     public String createPaymentLink(@RequestBody CreatePaymentLinkRequestDto requestDto) {
         return paymentService.createPaymentLink(requestDto.getOrderId());
     }
+
+    @PostMapping("/webhook")
+    public String handleWebhook(@RequestBody String request) {
+        // TODO: Save the status to the Db based on the event in the request
+        System.out.println("Received webhook: " + request);
+        return "Webhook received";
+    }
+
+    @PostMapping("/{orderId}/status")
+    public String getPaymentStatus(String orderId) {
+        // TODO: Fetch the status from Db
+        // return paymentService.getPaymentStatus(orderId);
+        return "Payment successful";
+    }
 }
