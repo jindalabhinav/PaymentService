@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "4059fb7c-50a1-4e2d-bee4-6e0cf8bbd391",
+		"name": "PaymentService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6255165"
+	},
+	"item": [
+		{
+			"name": "createPaymentLink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/payment/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"payment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "handleWebhook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "abc",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/payment/webhook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"payment",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
